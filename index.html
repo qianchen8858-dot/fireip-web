@@ -74,10 +74,16 @@
         .brand-box { border: 1px solid #e2e8f0; }
         .brand-title { text-align: center; font-weight: 900; color: #1e3a8a; margin: 20px 0 15px 0; font-size: 24px; padding: 15px 10px; background: #eff6ff; border-radius: 15px; border: 2px solid #bfdbfe; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         .brand-subtitle { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; font-weight: 600; }
-        .brand-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .brand-item { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 13px; color: #475569; text-decoration: none; font-weight: 500; }
-        .brand-item img { width: 48px; height: 48px; border-radius: 12px; object-fit: contain; background: #f8fafc; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .recommend { color: #dc2626; font-weight: bold; font-size: 11px; margin-top: 2px; }
+        
+        /* 修改后的双列布局品牌网格 */
+        .brand-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .brand-item { display: flex; align-items: center; gap: 10px; padding: 10px; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; background: #fff; transition: 0.2s; }
+        .brand-item:hover { background: #f8fafc; }
+        .brand-item img { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; }
+        .brand-info { flex-grow: 1; }
+        .brand-name { font-weight: bold; color: #334155; font-size: 14px; display: block; }
+        .brand-price { font-size: 12px; color: #dc2626; font-weight: 600; }
+        
         .float-contact, .theme-toggle { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .float-contact { bottom: 80px; background: #2563eb; color: white; text-decoration: none; }
         .theme-toggle { bottom: 20px; background: #333; color: white; }
@@ -151,17 +157,19 @@
             <div style="font-size: 11px; color: #3b82f6; text-align: center; margin-top: 8px;">今日剩余名额：<span id="stock-num" style="font-weight:bold; color:red;">10</span> 个</div>
         </div>
         <div class="brand-title">⚡ 官方授权【动态】代理品牌 ⚡</div>
-        <div class="brand-subtitle">以下均为 FireIP 深度测试且官方授权的优质动态代理商，可享优先通道：</div>
+        <div class="brand-subtitle">FireIP 深度测试且官方授权，享专属优惠价格：</div>
+        
         <div class="brand-grid">
-            <a href="https://ipweb.cc" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg">ipweb<span class="recommend">(推荐)</span></a>
-            <a href="https://kookeey.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png">kookeey<span class="recommend">(推荐)</span></a>
-            <a href="https://711proxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp">711proxy<span class="recommend">(推荐)</span></a>
-            <a href="https://cliproxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg">cliproxy<span class="recommend">(推荐)</span></a>
-            <a href="https://b2proxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg">b2proxy<span class="recommend">(推荐)</span></a>
-            <a href="https://lokiproxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg">lokiproxy<span class="recommend">(推荐)</span></a>
-            <a href="https://iprocket.io" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png">iprocket<span class="recommend">(推荐)</span></a>
-            <a href="https://ipwo.net" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg">ipwo<span class="recommend">(推荐)</span></a>
+            <a href="https://ipweb.cc" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg"><div class="brand-info"><span class="brand-name">ipweb</span><span class="brand-price">低至 $4.5/G</span></div></a>
+            <a href="https://kookeey.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png"><div class="brand-info"><span class="brand-name">kookeey</span><span class="brand-price">低至 $4.5/G</span></div></a>
+            <a href="https://711proxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp"><div class="brand-info"><span class="brand-name">711proxy</span><span class="brand-price">低至 $4.5/G</span></div></a>
+            <a href="https://cliproxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg"><div class="brand-info"><span class="brand-name">cliproxy</span><span class="brand-price">低至 $4.5/G</span></div></a>
+            <a href="https://b2proxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg"><div class="brand-info"><span class="brand-name">b2proxy</span><span class="brand-price">低至 $4.5/G</span></div></a>
+            <a href="https://lokiproxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg"><div class="brand-info"><span class="brand-name">lokiproxy</span><span class="brand-price">低至 $4.5/G</span></div></a>
+            <a href="https://iprocket.io" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png"><div class="brand-info"><span class="brand-name">iprocket</span><span class="brand-price">低至 $4.5/G</span></div></a>
+            <a href="https://ipwo.net" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg"><div class="brand-info"><span class="brand-name">ipwo</span><span class="brand-price">低至 $4.5/G</span></div></a>
         </div>
+        
         <div class="contact-grid" style="padding: 20px;">
             <a class="btn-link" href="https://t.me/huoliIP" target="_blank"><span class="wave-text">联系TG客服</span></a>
             <a class="btn-link" style="background: #10b981;" onclick="alert('请手动添加微信：a15016410566')"><span class="wave-text">点击获取微信</span></a>
@@ -202,7 +210,7 @@
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q1: 如何有效进行电商防关联？</button><div class="faq-answer">使用 FireIP 独享静态原生 IP，配合独立的浏览器指纹环境，可极大降低封号风险。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q2: 为什么挂了代理还是被封号？</button><div class="faq-answer">除 IP 外，指纹环境（WebRTC/Canvas）泄露是主因，请务必保持环境纯净。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q3: 指纹浏览器应选“全局”还是“自动匹配”？</button><div class="faq-answer">建议选“全局”，以确保所有请求（包括 DNS 解析）均强制走代理通道。</div></div>
-            <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q4: 指纹浏览器 WebRTC 设置选什么？</button><div class="faq-answer">请务必选择“替换为代理 IP”，这是防止物理 IP 暴露的关键技术手段。</div></div>
+            <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q4: 指纹浏览器 WebRTC 设置选什么？</button><div class="faq-answer">请必选择“替换为代理 IP”，这是防止物理 IP 暴露的关键技术手段。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q5: 同一个 IP 可以多环境复用吗？</button><div class="faq-answer">绝对不行，这会产生关联风险。1 个高质量静态 IP 对应 1 个独立的浏览器配置文件。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q6: 多账号矩阵最致命的关联因素？</button><div class="faq-answer">除了 IP，浏览器插件、字体、Canvas 指纹和缓存都会关联，务必使用独立配置文件。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q7: 使用代理 IP 会被平台检测到吗？</button><div class="faq-answer">FireIP 采用原生 IP，配合合理的指纹浏览器设置，能有效规避各平台检测。</div></div>
