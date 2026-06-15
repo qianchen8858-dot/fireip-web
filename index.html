@@ -73,9 +73,9 @@
         .brand-header { display: flex; flex-direction: column; align-items: center; gap: 5px; margin-bottom: 10px; }
         .brand-header img { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; }
         .brand-name { font-weight: bold; font-size: 13px; color: #1e293b; }
-        .price-table { width: 100%; border-collapse: collapse; font-size: 10px; margin-top: 5px; }
-        .price-table th, .price-table td { padding: 4px; border: 1px solid #edf2f7; text-align: center; }
-        .price-table th { background: #f8fafc; color: #64748b; }
+        .price-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+        .price-table th, .price-table td { padding: 6px; border: 1px solid #edf2f7; text-align: center; }
+        .price-table th { background: #f8fafc; color: #64748b; font-weight: bold; }
         
         .float-contact, .theme-toggle { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .float-contact { bottom: 80px; background: #2563eb; color: white; text-decoration: none; }
@@ -130,21 +130,21 @@
             <div style="font-size: 13px; color: #1e40af; text-align: center;">单次购买动态流量 <b>1T 以上</b>，额外<span class="highlight-red">加赠 100G</span>。</div>
             <div style="font-size: 11px; color: #3b82f6; text-align: center; margin-top: 8px;">今日剩余名额：<span id="stock-num" style="font-weight:bold; color:red;">10</span> 个</div>
         </div>
-        <div class="brand-title">⚡ 官方授权【动态】代理品牌 ⚡</div>
+        <div class="brand-title">⚡ 官方授权【动态住宅】代理品牌 ⚡</div>
         <div class="brand-subtitle">FireIP 深度测试且官方授权，点击品牌图标直接进站：</div>
         
         <div class="brand-list-wrapper">
             <script>
                 function renderTable() {
                     return `<table class="price-table">
-                        <tr><th>容量</th><th>优惠U</th><th>优惠¥</th><th>单价</th></tr>
-                        <tr><td>10G</td><td>8.5</td><td>60</td><td>6</td></tr>
-                        <tr><td>50G</td><td>38.9</td><td>275</td><td>5.5</td></tr>
-                        <tr><td>100G</td><td>70.7</td><td>500</td><td>5</td></tr>
-                        <tr><td>500G</td><td>318.5</td><td>2250</td><td>4.5</td></tr>
-                        <tr><td>1000G</td><td>566.2</td><td>4000</td><td>4</td></tr>
-                        <tr><td>3000G</td><td>-</td><td>-</td><td>3.5</td></tr>
-                        <tr><td>5000G</td><td>-</td><td>-</td><td>3</td></tr>
+                        <tr><th>容量</th><th>优惠¥</th><th>单价</th></tr>
+                        <tr><td>10G</td><td>60</td><td>6</td></tr>
+                        <tr><td>50G</td><td>275</td><td>5.5</td></tr>
+                        <tr><td>100G</td><td>500</td><td>5</td></tr>
+                        <tr><td>500G</td><td>2250</td><td>4.5</td></tr>
+                        <tr><td>1000G</td><td>4000</td><td>4</td></tr>
+                        <tr><td>3000G</td><td>10500</td><td>3.5</td></tr>
+                        <tr><td>5000G</td><td>15000</td><td>3</td></tr>
                     </table>`;
                 }
             </script>
