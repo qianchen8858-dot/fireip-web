@@ -26,7 +26,6 @@
         .container { width: 100%; max-width: 800px; }
         .card, .tool-box, .brand-box { background: var(--card-bg); padding: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 20px; box-sizing: border-box; }
         
-        /* 优化后的检测模块样式 */
         .detect-box { background: #ffffff; border: 1px solid #e2e8f0; padding: 24px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); margin-bottom: 20px; }
         .detect-title { font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #f8fafc; padding-bottom: 10px; }
         .detect-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
@@ -68,15 +67,15 @@
         .brand-title { text-align: center; font-weight: 900; color: #1e3a8a; margin: 20px 0 15px 0; font-size: 24px; padding: 15px 10px; background: #eff6ff; border-radius: 15px; border: 2px solid #bfdbfe; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         .brand-subtitle { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; font-weight: 600; }
         
-        /* 动态品牌 + 价格布局 */
+        /* 动态品牌 + 价格布局 (一行2个) */
         .brand-list-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
         .brand-card { border: 1px solid #e2e8f0; padding: 10px; border-radius: 12px; background: #ffffff; text-align: center; }
         .brand-header { display: flex; flex-direction: column; align-items: center; gap: 5px; margin-bottom: 10px; }
         .brand-header img { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; }
         .brand-name { font-weight: bold; font-size: 13px; color: #1e293b; }
-        .price-table { width: 100%; border-collapse: collapse; font-size: 11px; }
-        .price-table th { background: #f8fafc; padding: 4px; border: 1px solid #edf2f7; color: #64748b; }
-        .price-table td { padding: 4px; border: 1px solid #edf2f7; color: #334155; }
+        .price-table { width: 100%; border-collapse: collapse; font-size: 10px; margin-top: 5px; }
+        .price-table th, .price-table td { padding: 4px; border: 1px solid #edf2f7; text-align: center; }
+        .price-table th { background: #f8fafc; color: #64748b; }
         
         .float-contact, .theme-toggle { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .float-contact { bottom: 80px; background: #2563eb; color: white; text-decoration: none; }
@@ -135,70 +134,29 @@
         <div class="brand-subtitle">FireIP 深度测试且官方授权，点击品牌图标直接进站：</div>
         
         <div class="brand-list-wrapper">
-            <div class="brand-card">
-                <a href="https://ipweb.cc" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg"><span class="brand-name">ipweb</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
-            <div class="brand-card">
-                <a href="https://kookeey.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png"><span class="brand-name">kookeey</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
-            <div class="brand-card">
-                <a href="https://711proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp"><span class="brand-name">711proxy</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
-            <div class="brand-card">
-                <a href="https://cliproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg"><span class="brand-name">cliproxy</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
-            <div class="brand-card">
-                <a href="https://b2proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg"><span class="brand-name">b2proxy</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
-            <div class="brand-card">
-                <a href="https://lokiproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg"><span class="brand-name">lokiproxy</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
-            <div class="brand-card">
-                <a href="https://iprocket.io" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png"><span class="brand-name">iprocket</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
-            <div class="brand-card">
-                <a href="https://ipwo.net" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg"><span class="brand-name">ipwo</span></a>
-                <table class="price-table">
-                    <tr><th>套餐</th><th>单价</th></tr>
-                    <tr><td>3000G</td><td>3.5元/G</td></tr>
-                    <tr><td>5000G</td><td>3.0元/G</td></tr>
-                </table>
-            </div>
+            <script>
+                function renderTable() {
+                    return `<table class="price-table">
+                        <tr><th>容量</th><th>优惠U</th><th>优惠¥</th><th>单价</th></tr>
+                        <tr><td>10G</td><td>8.5</td><td>60</td><td>6</td></tr>
+                        <tr><td>50G</td><td>38.9</td><td>275</td><td>5.5</td></tr>
+                        <tr><td>100G</td><td>70.7</td><td>500</td><td>5</td></tr>
+                        <tr><td>500G</td><td>318.5</td><td>2250</td><td>4.5</td></tr>
+                        <tr><td>1000G</td><td>566.2</td><td>4000</td><td>4</td></tr>
+                        <tr><td>3000G</td><td>-</td><td>-</td><td>3.5</td></tr>
+                        <tr><td>5000G</td><td>-</td><td>-</td><td>3</td></tr>
+                    </table>`;
+                }
+            </script>
+            
+            <div class="brand-card"><a href="https://ipweb.cc" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg"><span class="brand-name">ipweb</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://kookeey.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png"><span class="brand-name">kookeey</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://711proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp"><span class="brand-name">711proxy</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://cliproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg"><span class="brand-name">cliproxy</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://b2proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg"><span class="brand-name">b2proxy</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://lokiproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg"><span class="brand-name">lokiproxy</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://iprocket.io" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png"><span class="brand-name">iprocket</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://ipwo.net" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg"><span class="brand-name">ipwo</span></a><script>document.write(renderTable());</script></div>
         </div>
 
         <div class="contact-grid" style="padding: 20px;">
