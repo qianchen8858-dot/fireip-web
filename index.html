@@ -68,16 +68,16 @@
         .brand-title { text-align: center; font-weight: 900; color: #1e3a8a; margin: 20px 0 15px 0; font-size: 24px; padding: 15px 10px; background: #eff6ff; border-radius: 15px; border: 2px solid #bfdbfe; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         .brand-subtitle { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; font-weight: 600; }
         
-        /* 价格表样式 */
-        .price-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 12px; border-radius: 10px; overflow: hidden; }
-        .price-table th { background: #f1f5f9; color: #475569; padding: 8px; text-align: center; }
-        .price-table td { padding: 8px; text-align: center; border-bottom: 1px solid #f1f5f9; color: #334155; font-weight: 500; }
-        .price-table tr:last-child td { border-bottom: none; }
+        /* 动态品牌 + 价格布局 */
+        .brand-list-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .brand-card { border: 1px solid #e2e8f0; padding: 10px; border-radius: 12px; background: #ffffff; text-align: center; }
+        .brand-header { display: flex; flex-direction: column; align-items: center; gap: 5px; margin-bottom: 10px; }
+        .brand-header img { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; }
+        .brand-name { font-weight: bold; font-size: 13px; color: #1e293b; }
+        .price-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+        .price-table th { background: #f8fafc; padding: 4px; border: 1px solid #edf2f7; color: #64748b; }
+        .price-table td { padding: 4px; border: 1px solid #edf2f7; color: #334155; }
         
-        .brand-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .brand-item { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 13px; color: #475569; text-decoration: none; font-weight: 500; }
-        .brand-item img { width: 48px; height: 48px; border-radius: 12px; object-fit: contain; background: #f8fafc; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .recommend { color: #dc2626; font-weight: bold; font-size: 11px; margin-top: 2px; }
         .float-contact, .theme-toggle { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .float-contact { bottom: 80px; background: #2563eb; color: white; text-decoration: none; }
         .theme-toggle { bottom: 20px; background: #333; color: white; }
@@ -132,34 +132,75 @@
             <div style="font-size: 11px; color: #3b82f6; text-align: center; margin-top: 8px;">今日剩余名额：<span id="stock-num" style="font-weight:bold; color:red;">10</span> 个</div>
         </div>
         <div class="brand-title">⚡ 官方授权【动态】代理品牌 ⚡</div>
+        <div class="brand-subtitle">FireIP 深度测试且官方授权，点击品牌图标直接进站：</div>
         
-        <div style="background: #f8fafc; padding: 15px; border-radius: 15px; margin-bottom: 20px; border: 1px solid #e2e8f0;">
-            <div style="font-weight: bold; color: #1e3a8a; margin-bottom: 10px; font-size: 14px;">🔥 官方动态套餐价格表 (参考汇率 6.8)</div>
-            <table class="price-table">
-                <thead>
-                    <tr><th>套餐/GB</th><th>优惠价/U</th><th>优惠价/RMB</th><th>核算单价/RMB</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>10GB</td><td>8.82</td><td>60</td><td>6.0</td></tr>
-                    <tr><td>50GB</td><td>40.44</td><td>275</td><td>5.5</td></tr>
-                    <tr><td>100GB</td><td>73.53</td><td>500</td><td>5.0</td></tr>
-                    <tr><td>500GB</td><td>330.88</td><td>2250</td><td>4.5</td></tr>
-                    <tr><td>1000GB</td><td>588.24</td><td>4000</td><td>4.0</td></tr>
-                </tbody>
-            </table>
+        <div class="brand-list-wrapper">
+            <div class="brand-card">
+                <a href="https://ipweb.cc" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg"><span class="brand-name">ipweb</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
+            <div class="brand-card">
+                <a href="https://kookeey.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png"><span class="brand-name">kookeey</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
+            <div class="brand-card">
+                <a href="https://711proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp"><span class="brand-name">711proxy</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
+            <div class="brand-card">
+                <a href="https://cliproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg"><span class="brand-name">cliproxy</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
+            <div class="brand-card">
+                <a href="https://b2proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg"><span class="brand-name">b2proxy</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
+            <div class="brand-card">
+                <a href="https://lokiproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg"><span class="brand-name">lokiproxy</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
+            <div class="brand-card">
+                <a href="https://iprocket.io" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png"><span class="brand-name">iprocket</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
+            <div class="brand-card">
+                <a href="https://ipwo.net" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg"><span class="brand-name">ipwo</span></a>
+                <table class="price-table">
+                    <tr><th>套餐</th><th>单价</th></tr>
+                    <tr><td>3000G</td><td>3.5元/G</td></tr>
+                    <tr><td>5000G</td><td>3.0元/G</td></tr>
+                </table>
+            </div>
         </div>
 
-        <div class="brand-subtitle">以下均为 FireIP 深度测试且官方授权的优质动态代理商，可享优先通道：</div>
-        <div class="brand-grid">
-            <a href="https://ipweb.cc" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg">ipweb<span class="recommend">(推荐)</span></a>
-            <a href="https://kookeey.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png">kookeey<span class="recommend">(推荐)</span></a>
-            <a href="https://711proxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp">711proxy<span class="recommend">(推荐)</span></a>
-            <a href="https://cliproxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg">cliproxy<span class="recommend">(推荐)</span></a>
-            <a href="https://b2proxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg">b2proxy<span class="recommend">(推荐)</span></a>
-            <a href="https://lokiproxy.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg">lokiproxy<span class="recommend">(推荐)</span></a>
-            <a href="https://iprocket.io" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png">iprocket<span class="recommend">(推荐)</span></a>
-            <a href="https://ipwo.net" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg">ipwo<span class="recommend">(推荐)</span></a>
-        </div>
         <div class="contact-grid" style="padding: 20px;">
             <a class="btn-link" href="https://t.me/huoliIP" target="_blank"><span class="wave-text">联系TG客服</span></a>
             <a class="btn-link" style="background: #10b981;" onclick="alert('请手动添加微信：a15016410566')"><span class="wave-text">点击获取微信</span></a>
@@ -234,25 +275,14 @@
         if(btn) btn.classList.add('active');
     }
     function toggleAnswer(btn) { const answer = btn.nextElementSibling; answer.style.display = (answer.style.display === 'block' ? 'none' : 'block'); }
-    
-    // 修改后的检测逻辑
     async function runAllChecks() {
-        // 设定你指纹浏览器中使用的代理 IP，用于匹配判断
         const TARGET_PROXY_IP = "216.132.206.214"; 
-        
         const setRes = (id, val, isSafe) => {
             const el = document.getElementById(id);
-            if(el) {
-                el.innerText = val;
-                el.className = isSafe ? 'value val-safe' : 'value val-warn';
-            }
+            if(el) { el.innerText = val; el.className = isSafe ? 'value val-safe' : 'value val-warn'; }
         };
-
         document.getElementById('pub-ip').innerText = "检测中...";
-        // 1. 公网IP
         fetch('https://api.ipify.org?format=json').then(r=>r.json()).then(d=>setRes('pub-ip', d.ip, true)).catch(()=>setRes('pub-ip', "失败", false));
-        
-        // 2. WebRTC 修改版逻辑
         const rtc = new RTCPeerConnection({iceServers:[{urls: "stun:stun.l.google.com:19302"}]});
         rtc.createDataChannel('');
         rtc.createOffer().then(o => rtc.setLocalDescription(o));
@@ -261,18 +291,10 @@
             const ipMatch = /([0-9]{1,3}(\.[0-9]{1,3}){3})/.exec(ice.candidate.candidate);
             if(ipMatch) {
                 const detectedIP = ipMatch[1];
-                // 如果检测到的 IP 等于代理 IP，则判定为安全
-                if(detectedIP === TARGET_PROXY_IP) {
-                    setRes('webrtc-status', "安全 (已走代理: " + detectedIP + ")", true);
-                } else {
-                    setRes('webrtc-status', "泄露: " + detectedIP, false);
-                }
+                if(detectedIP === TARGET_PROXY_IP) setRes('webrtc-status', "安全 (已走代理: " + detectedIP + ")", true);
+                else setRes('webrtc-status', "泄露: " + detectedIP, false);
             }
         };
-
-        // 3. DNS 检测功能已删除
-        
-        // 4. 时区与 WebGL
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
         setRes('timezone-status', tz, true);
         const canvas = document.createElement('canvas');
@@ -280,7 +302,6 @@
         const debugInfo = gl ? gl.getExtension('WEBGL_debug_renderer_info') : null;
         setRes('webgl-status', debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : "受限", !!debugInfo);
     }
-
     function updateOnlineCount() { let count = 300 + Math.floor(Math.random() * 150); document.getElementById('online-count').innerText = count; }
     setInterval(updateOnlineCount, 5000);
     function calculateStock() {
