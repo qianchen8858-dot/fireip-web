@@ -74,10 +74,11 @@
         .brand-header img { width: 60px; height: 60px; border-radius: 8px; object-fit: contain; }
         .brand-name { font-weight: 900; font-size: 15px; color: #1e293b; }
         
-        /* 价格表样式：还原原始线条边框 */
-        .price-table { flex: 1; border-collapse: collapse; font-size: 12px; border: 1px solid #e2e8f0; }
+        /* 价格表样式：斑马纹+圆角边框 */
+        .price-table { flex: 1; border-collapse: separate; border-spacing: 0; font-size: 12px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
         .price-table th { border: 1px solid #e2e8f0; background: #f8fafc; padding: 8px 4px; }
         .price-table td { border: 1px solid #e2e8f0; padding: 8px 4px; text-align: center; }
+        .price-table tr:nth-child(even) { background-color: #f9f9f9; }
         
         .theme-toggle { position: fixed; right: 20px; bottom: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); background: #333; color: white; }
         .faq-tabs { display: flex; gap: 5px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px; }
