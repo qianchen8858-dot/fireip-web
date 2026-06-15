@@ -74,13 +74,11 @@
         .brand-header img { width: 60px; height: 60px; border-radius: 8px; object-fit: contain; }
         .brand-name { font-weight: 900; font-size: 15px; color: #1e293b; }
         
-        /* 价格表样式：斑马纹+圆角边框 */
-        .price-table { flex: 1; border-collapse: separate; border-spacing: 0; font-size: 12px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
-        .price-table th { border: 1px solid #e2e8f0; background: #f8fafc; padding: 8px 4px; }
-        .price-table td { border: 1px solid #e2e8f0; padding: 8px 4px; text-align: center; }
+        /* 细线条价格表 */
+        .price-table { flex: 1; border-collapse: collapse; font-size: 12px; border: 0.5px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+        .price-table th, .price-table td { border: 0.5px solid #e2e8f0; padding: 6px 4px; text-align: center; }
         .price-table tr:nth-child(even) { background-color: #f9f9f9; }
         
-        .theme-toggle { position: fixed; right: 20px; bottom: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); background: #333; color: white; }
         .faq-tabs { display: flex; gap: 5px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px; }
         .tab-btn { padding: 8px 12px; background: #e2e8f0; border: none; border-radius: 8px; font-size: 12px; cursor: pointer; color: #475569; white-space: nowrap; }
         .tab-btn.active { background: var(--primary); color: white; }
@@ -136,8 +134,8 @@
         
         <div class="brand-list-wrapper">
             <script>
-                function renderTable() {
-                    return `<table class="price-table">
+                function renderTable(color) {
+                    return `<table class="price-table" style="color:${color}">
                         <tr><th>住宅代理/GB</th><th>优惠价/RMB</th><th>核算单价/RMB</th></tr>
                         <tr><td>10G</td><td>60</td><td>6</td></tr>
                         <tr><td>50G</td><td>275</td><td>5.5</td></tr>
@@ -148,14 +146,14 @@
                 }
             </script>
             
-            <div class="brand-card"><a href="https://ipweb.cc" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg"><span class="brand-name">ipweb</span></a><script>document.write(renderTable());</script></div>
-            <div class="brand-card"><a href="https://kookeey.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png"><span class="brand-name">kookeey</span></a><script>document.write(renderTable());</script></div>
-            <div class="brand-card"><a href="https://711proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp"><span class="brand-name">711proxy</span></a><script>document.write(renderTable());</script></div>
-            <div class="brand-card"><a href="https://cliproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg"><span class="brand-name">cliproxy</span></a><script>document.write(renderTable());</script></div>
-            <div class="brand-card"><a href="https://b2proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg"><span class="brand-name">b2proxy</span></a><script>document.write(renderTable());</script></div>
-            <div class="brand-card"><a href="https://lokiproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg"><span class="brand-name">lokiproxy</span></a><script>document.write(renderTable());</script></div>
-            <div class="brand-card"><a href="https://iprocket.io" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png"><span class="brand-name">iprocket</span></a><script>document.write(renderTable());</script></div>
-            <div class="brand-card"><a href="https://ipwo.net" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg"><span class="brand-name">ipwo</span></a><script>document.write(renderTable());</script></div>
+            <div class="brand-card"><a href="https://ipweb.cc" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg"><span class="brand-name">ipweb</span></a><script>document.write(renderTable('#3b82f6'));</script></div>
+            <div class="brand-card"><a href="https://kookeey.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png"><span class="brand-name">kookeey</span></a><script>document.write(renderTable('#10b981'));</script></div>
+            <div class="brand-card"><a href="https://711proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/711proxy.logo.webp"><span class="brand-name">711proxy</span></a><script>document.write(renderTable('#ef4444'));</script></div>
+            <div class="brand-card"><a href="https://cliproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/cliproxy.logo.jpg"><span class="brand-name">cliproxy</span></a><script>document.write(renderTable('#8b5cf6'));</script></div>
+            <div class="brand-card"><a href="https://b2proxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/B2Proxy.logo.jpg"><span class="brand-name">b2proxy</span></a><script>document.write(renderTable('#f59e0b'));</script></div>
+            <div class="brand-card"><a href="https://lokiproxy.com" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/lokiproxy.logo.jpg"><span class="brand-name">lokiproxy</span></a><script>document.write(renderTable('#6b7280'));</script></div>
+            <div class="brand-card"><a href="https://iprocket.io" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/iprocket.logo.png"><span class="brand-name">iprocket</span></a><script>document.write(renderTable('#ec4899'));</script></div>
+            <div class="brand-card"><a href="https://ipwo.net" class="brand-header"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipwo.logo.jpg"><span class="brand-name">ipwo</span></a><script>document.write(renderTable('#14b8a6'));</script></div>
         </div>
 
         <div class="contact-grid" style="padding: 20px;">
@@ -219,8 +217,6 @@
         </div>
     </div>
 </div>
-
-<div class="theme-toggle" onclick="document.body.classList.toggle('dark-mode')">🌙</div>
 
 <script>
     window.onload = () => filterFAQ('config', document.querySelector('.tab-btn'));
