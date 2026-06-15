@@ -68,14 +68,17 @@
         .toggle-btn { margin-top: 10px; background: #f1f5f9; padding: 8px 16px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; color: #475569; cursor: pointer; }
         .tip-text { font-size: 12px; color: #64748b; margin-top: 10px; text-align: center; line-height: 1.5; padding: 5px; background: #f1f5f9; border-radius: 8px; }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        
+        /* 布局恢复与优化 */
         .features-inline { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 15px; }
         .feature-item { padding: 8px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 11px; text-align: center; }
         .feature-item b { display: block; color: var(--primary); font-size: 12px; margin-bottom: 2px; }
+        
         .brand-box { border: 1px solid #e2e8f0; }
         .brand-title { text-align: center; font-weight: 900; color: #1e3a8a; margin: 20px 0 15px 0; font-size: 24px; padding: 15px 10px; background: #eff6ff; border-radius: 15px; border: 2px solid #bfdbfe; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         .brand-subtitle { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; font-weight: 600; }
         
-        /* 修改后的双列布局品牌网格 */
+        /* 修改为双列布局品牌网格 */
         .brand-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
         .brand-item { display: flex; align-items: center; gap: 10px; padding: 10px; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; background: #fff; transition: 0.2s; }
         .brand-item:hover { background: #f8fafc; }
@@ -98,8 +101,9 @@
 <body>
 <div class="container">
     <div class="card">
+        <!-- 还原顶部结构 -->
         <img id="logo" src="https://raw.githubusercontent.com/qianchen8858-dot/my-images/main/photo_2024-12-11_00-42-27.jpg">
-        <h2><span class="status-dot"></span>FireIP 火力海外代理</h2>
+        <h2 style="margin-bottom: 15px;"><span class="status-dot"></span>FireIP 火力海外代理</h2>
         
         <table class="price-table">
             <thead>
@@ -120,9 +124,11 @@
         </table>
 
         <div style="text-align:center; font-size: 12px; color: #64748b; margin-bottom: 5px;">专注海外代理 3 年，已服务 5000+ 电商卖家与工作室。</div>
-        <div style="text-align:center; font-size: 12px; color: #10b981; margin-bottom: 10px;">当前在线人数: <span id="online-count">362</span> 人</div>
+        <div style="text-align:center; font-size: 12px; color: #10b981; margin-bottom: 10px;">当前在线人数: <span id="online-count">386</span> 人</div>
         <div class="trust-tags"><span class="tag">✓ 环境安全</span><span class="tag">✓ 跨境电商</span><span class="tag">✓ 市场调研</span><span class="tag">✓ 自动化</span></div>
-        <a class="btn-link" href="https://huo.onip.cc/">点击进站/购买静态</a>
+        <a class="btn-link" href="https://huo.onip.cc/" style="margin-bottom: 15px;">点击进站/购买静态</a>
+        
+        <!-- 下方功能模块 -->
         <div class="features-inline">
             <div class="feature-item"><b>独享原生IP</b>超低使用率更纯净</div>
             <div class="feature-item"><b>拒绝跳跃</b>独占带宽更稳定</div>
@@ -159,6 +165,7 @@
         <div class="brand-title">⚡ 官方授权【动态】代理品牌 ⚡</div>
         <div class="brand-subtitle">FireIP 深度测试且官方授权，享专属优惠价格：</div>
         
+        <!-- 双列布局的品牌列表 -->
         <div class="brand-grid">
             <a href="https://ipweb.cc" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/ipweb.logo.jpg"><div class="brand-info"><span class="brand-name">ipweb</span><span class="brand-price">低至 $4.5/G</span></div></a>
             <a href="https://kookeey.com" class="brand-item"><img src="https://raw.githubusercontent.com/huoliip/my-images/refs/heads/main/kookeey.logo.png"><div class="brand-info"><span class="brand-name">kookeey</span><span class="brand-price">低至 $4.5/G</span></div></a>
@@ -210,7 +217,7 @@
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q1: 如何有效进行电商防关联？</button><div class="faq-answer">使用 FireIP 独享静态原生 IP，配合独立的浏览器指纹环境，可极大降低封号风险。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q2: 为什么挂了代理还是被封号？</button><div class="faq-answer">除 IP 外，指纹环境（WebRTC/Canvas）泄露是主因，请务必保持环境纯净。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q3: 指纹浏览器应选“全局”还是“自动匹配”？</button><div class="faq-answer">建议选“全局”，以确保所有请求（包括 DNS 解析）均强制走代理通道。</div></div>
-            <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q4: 指纹浏览器 WebRTC 设置选什么？</button><div class="faq-answer">请必选择“替换为代理 IP”，这是防止物理 IP 暴露的关键技术手段。</div></div>
+            <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q4: 指纹浏览器 WebRTC 设置选什么？</button><div class="faq-answer">请务必选择“替换为代理 IP”，这是防止物理 IP 暴露的关键技术手段。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q5: 同一个 IP 可以多环境复用吗？</button><div class="faq-answer">绝对不行，这会产生关联风险。1 个高质量静态 IP 对应 1 个独立的浏览器配置文件。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q6: 多账号矩阵最致命的关联因素？</button><div class="faq-answer">除了 IP，浏览器插件、字体、Canvas 指纹和缓存都会关联，务必使用独立配置文件。</div></div>
             <div class="faq-item matrix"><button class="faq-question" onclick="toggleAnswer(this)">Q7: 使用代理 IP 会被平台检测到吗？</button><div class="faq-answer">FireIP 采用原生 IP，配合合理的指纹浏览器设置，能有效规避各平台检测。</div></div>
