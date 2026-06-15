@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <!-- Telegram 分享预览元数据 -->
     <meta property="og:title" content="FireIP - 优质代理服务">
     <meta property="og:description" content="专注海外代理 3 年，已服务 5000+ 电商卖家与工作室。">
     <meta property="og:image" content="https://raw.githubusercontent.com/qianchen8858-dot/my-images/main/photo_2024-12-11_00-42-27.jpg">
     <meta property="og:type" content="website">
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-18BWG0F5ZL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -28,6 +26,13 @@
         .container { width: 100%; max-width: 800px; }
         .card, .tool-box, .brand-box { background: var(--card-bg); padding: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 20px; box-sizing: border-box; }
         
+        /* 价格表格样式 */
+        .price-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; border-radius: 10px; overflow: hidden; }
+        .price-table th { background: #eff6ff; color: #1e40af; padding: 12px 8px; text-align: center; }
+        .price-table td { padding: 10px 8px; border-bottom: 1px solid #f1f5f9; text-align: center; }
+        .price-table tr:nth-child(even) { background: #f8fafc; }
+        .price-table .highlight { color: #dc2626; font-weight: bold; }
+
         /* 优化后的检测模块样式 */
         .detect-box { background: #ffffff; border: 1px solid #e2e8f0; padding: 24px; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); margin-bottom: 20px; }
         .detect-title { font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #f8fafc; padding-bottom: 10px; }
@@ -89,6 +94,25 @@
     <div class="card">
         <img id="logo" src="https://raw.githubusercontent.com/qianchen8858-dot/my-images/main/photo_2024-12-11_00-42-27.jpg">
         <h2><span class="status-dot"></span>FireIP 火力海外代理</h2>
+        
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>流量规格</th>
+                    <th>优惠价(U)</th>
+                    <th>折合(RMB)</th>
+                    <th>核算单价</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>10 GB</td><td>8.5</td><td>60</td><td>6.0/G</td></tr>
+                <tr><td>50 GB</td><td>38.9</td><td>275</td><td>5.5/G</td></tr>
+                <tr><td>100 GB</td><td>70.7</td><td>500</td><td>5.0/G</td></tr>
+                <tr><td>500 GB</td><td>339</td><td>2400</td><td>4.8/G</td></tr>
+                <tr><td class="highlight">1000 GB+</td><td>635</td><td>4500</td><td class="highlight">4.5/G</td></tr>
+            </tbody>
+        </table>
+
         <div style="text-align:center; font-size: 12px; color: #64748b; margin-bottom: 5px;">专注海外代理 3 年，已服务 5000+ 电商卖家与工作室。</div>
         <div style="text-align:center; font-size: 12px; color: #10b981; margin-bottom: 10px;">当前在线人数: <span id="online-count">362</span> 人</div>
         <div class="trust-tags"><span class="tag">✓ 环境安全</span><span class="tag">✓ 跨境电商</span><span class="tag">✓ 市场调研</span><span class="tag">✓ 自动化</span></div>
@@ -107,7 +131,6 @@
         <button onclick="generateQRCode()">生成专属二维码</button>
         <div id="qrcode"></div>
         <div id="socksURLContainer"></div>
-        <!-- 提示区域一 -->
         <div style="text-align: center; font-size: 12px; color: #2563eb; margin: 10px 0;">需要更多原生/独享 IP？点击查看：<a href="https://huo.onip.cc" style="color: #2563eb; font-weight: bold;">huo.onip.cc</a></div>
         <div id="copyAction" style="display:none; text-align:center; margin-top:10px;">
             <button class="copy-btn" onclick="copyResult()">一键复制所有配置</button>
@@ -166,7 +189,6 @@
             <button class="tab-btn" onclick="filterFAQ('basic', this)">科普与基础</button>
         </div>
         <div id="faq-list">
-            <!-- 提示区域二 -->
             <div class="faq-item config" style="display: block;"><button class="faq-question" style="color: #2563eb;" onclick="toggleAnswer(this)">Q: 想要更多类型/区域的 IP？</button><div class="faq-answer" style="display: block;">请访问我们的主站 <a href="https://huo.onip.cc">huo.onip.cc</a> 获取专属线路支持。</div></div>
             <div class="faq-item config" style="display: block;"><button class="faq-question" onclick="toggleAnswer(this)">Q1: 我测试代理 IP 显示为国内，是我没配置好吗？</button><div class="faq-answer">这并非代理 IP 问题，而是代理软件未开启“TUN 模式”导致旁路泄露。建议使用全流量接管，或在指纹浏览器内配置代理。</div></div>
             <div class="faq-item config" style="display: block;"><button class="faq-question" onclick="toggleAnswer(this)">Q2: 为什么使用代理后，网速非常慢？</button><div class="faq-answer">代理 IP 的质量取决于中转线路。请先检查您的中转节点是否断网或延迟过高。请遵循“就近原则”，优先选择距离您当前地理位置最近的中转节点（例如：人在大陆优先选择香港线路），以获得最佳访问速度。</div></div>
@@ -215,9 +237,7 @@
     }
     function toggleAnswer(btn) { const answer = btn.nextElementSibling; answer.style.display = (answer.style.display === 'block' ? 'none' : 'block'); }
     
-    // 修改后的检测逻辑
     async function runAllChecks() {
-        // 设定你指纹浏览器中使用的代理 IP，用于匹配判断
         const TARGET_PROXY_IP = "216.132.206.214"; 
         
         const setRes = (id, val, isSafe) => {
@@ -229,10 +249,8 @@
         };
 
         document.getElementById('pub-ip').innerText = "检测中...";
-        // 1. 公网IP
         fetch('https://api.ipify.org?format=json').then(r=>r.json()).then(d=>setRes('pub-ip', d.ip, true)).catch(()=>setRes('pub-ip', "失败", false));
         
-        // 2. WebRTC 修改版逻辑
         const rtc = new RTCPeerConnection({iceServers:[{urls: "stun:stun.l.google.com:19302"}]});
         rtc.createDataChannel('');
         rtc.createOffer().then(o => rtc.setLocalDescription(o));
@@ -241,7 +259,6 @@
             const ipMatch = /([0-9]{1,3}(\.[0-9]{1,3}){3})/.exec(ice.candidate.candidate);
             if(ipMatch) {
                 const detectedIP = ipMatch[1];
-                // 如果检测到的 IP 等于代理 IP，则判定为安全
                 if(detectedIP === TARGET_PROXY_IP) {
                     setRes('webrtc-status', "安全 (已走代理: " + detectedIP + ")", true);
                 } else {
@@ -250,9 +267,6 @@
             }
         };
 
-        // 3. DNS 检测功能已删除
-        
-        // 4. 时区与 WebGL
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
         setRes('timezone-status', tz, true);
         const canvas = document.createElement('canvas');
