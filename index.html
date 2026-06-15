@@ -64,18 +64,24 @@
         .feature-item { padding: 8px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 11px; text-align: center; }
         .feature-item b { display: block; color: var(--primary); font-size: 12px; margin-bottom: 2px; }
         .brand-box { border: 1px solid #e2e8f0; }
-        .brand-title { text-align: center; font-weight: 900; color: #1e3a8a; margin: 20px 0 15px 0; font-size: 24px; padding: 15px 10px; background: #eff6ff; border-radius: 15px; border: 2px solid #bfdbfe; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .brand-subtitle { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; font-weight: 600; }
         
-        /* 动态品牌 + 价格布局 (单列布局，左图右表) */
+        /* 优化后的标题样式 */
+        .brand-title { text-align: center; font-weight: 900; color: #1e3a8a; margin: 25px 0 10px 0; font-size: 22px; }
+        .brand-subtitle { text-align: center; color: #64748b; font-size: 14px; margin-bottom: 25px; padding-bottom: 15px; font-weight: 600; }
+        
+        /* 动态品牌 + 价格布局 */
         .brand-list-wrapper { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
         .brand-card { border: 1px solid #e2e8f0; padding: 12px; border-radius: 12px; background: #ffffff; display: flex; align-items: center; gap: 15px; }
-        .brand-header { display: flex; flex-direction: column; align-items: center; gap: 5px; min-width: 80px; text-decoration: none; }
+        .brand-header { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 80px; text-decoration: none; }
         .brand-header img { width: 60px; height: 60px; border-radius: 8px; object-fit: contain; }
-        .brand-name { font-weight: bold; font-size: 13px; color: #1e293b; }
-        .price-table { flex: 1; border-collapse: collapse; font-size: 13px; }
-        .price-table th, .price-table td { padding: 6px; border: 1px solid #edf2f7; text-align: center; }
-        .price-table th { background: #f8fafc; color: #64748b; font-weight: bold; }
+        .brand-name { font-weight: 900; font-size: 15px; color: #1e293b; }
+        
+        /* 优化后的表格样式 */
+        .price-table { flex: 1; border-collapse: separate; border-spacing: 0; font-size: 12px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+        .price-table th, .price-table td { padding: 8px 4px; border-bottom: 1px solid #edf2f7; border-right: 1px solid #edf2f7; text-align: center; }
+        .price-table th:last-child, .price-table td:last-child { border-right: none; }
+        .price-table tr:last-child td { border-bottom: none; }
+        .price-table th { background: #f8fafc; color: #475569; font-weight: bold; }
         
         .float-contact, .theme-toggle { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .float-contact { bottom: 80px; background: #2563eb; color: white; text-decoration: none; }
@@ -131,7 +137,7 @@
             <div style="font-size: 11px; color: #3b82f6; text-align: center; margin-top: 8px;">今日剩余名额：<span id="stock-num" style="font-weight:bold; color:red;">10</span> 个</div>
         </div>
         <div class="brand-title">⚡ 官方授权【动态住宅】代理品牌 ⚡</div>
-        <div class="brand-subtitle">FireIP 深度测试且官方授权，点击品牌图标直接进站：</div>
+        <div class="brand-subtitle">官方授权合作平台，点击下方联系客服快速进入采购通道。</div>
         
         <div class="brand-list-wrapper">
             <script>
