@@ -74,12 +74,11 @@
         .brand-header img { width: 60px; height: 60px; border-radius: 8px; object-fit: contain; }
         .brand-name { font-weight: 900; font-size: 15px; color: #1e293b; }
         
-        /* 强化后的表格层次感 */
-        .price-table { flex: 1; border-collapse: collapse; font-size: 12px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-        .price-table th { background: #f1f5f9; color: #475569; padding: 10px 6px; font-weight: 800; border-bottom: 2px solid #e2e8f0; }
-        .price-table td { padding: 8px 6px; border-bottom: 1px solid #f1f5f9; text-align: center; color: #334155; }
-        .price-table tr:nth-child(even) { background-color: #fcfcfc; }
-        .price-table tr td:last-child { font-weight: 700; color: var(--primary); }
+        /* 价格表样式：增加斑马纹层次感 */
+        .price-table { flex: 1; border-collapse: collapse; font-size: 12px; border: 1px solid #e2e8f0; border-radius: 8px; }
+        .price-table th { background: #f8fafc; padding: 8px 4px; border-bottom: 2px solid #e2e8f0; }
+        .price-table td { padding: 8px 4px; border-bottom: 1px solid #edf2f7; text-align: center; }
+        .price-table tr:nth-child(even) { background-color: #f9f9f9; }
         
         .float-contact, .theme-toggle { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .float-contact { bottom: 80px; background: #2563eb; color: white; text-decoration: none; }
@@ -141,12 +140,12 @@
             <script>
                 function renderTable() {
                     return `<table class="price-table">
-                        <tr><th>套餐</th><th>优惠价</th><th>单价</th></tr>
-                        <tr><td>10G</td><td>60</td><td>6/G</td></tr>
-                        <tr><td>50G</td><td>275</td><td>5.5/G</td></tr>
-                        <tr><td>100G</td><td>500</td><td>5/G</td></tr>
-                        <tr><td>500G</td><td>2250</td><td>4.5/G</td></tr>
-                        <tr><td>1000G</td><td>4000</td><td>4/G</td></tr>
+                        <tr><th>住宅代理/GB</th><th>优惠价/RMB</th><th>核算单价/RMB</th></tr>
+                        <tr><td>10G</td><td>60</td><td>6</td></tr>
+                        <tr><td>50G</td><td>275</td><td>5.5</td></tr>
+                        <tr><td>100G</td><td>500</td><td>5</td></tr>
+                        <tr><td>500G</td><td>2250</td><td>4.5</td></tr>
+                        <tr><td>1000G</td><td>4000</td><td>4</td></tr>
                     </table>`;
                 }
             </script>
